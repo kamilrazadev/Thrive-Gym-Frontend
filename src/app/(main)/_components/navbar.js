@@ -30,7 +30,9 @@ export default function Navbar() {
   // Lock body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   return (
@@ -44,15 +46,13 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="relative z-10 group">
-            <div style={{ mixBlendMode: "screen" }}>
-              <img
-                src="/images/logo.png"
-                alt="Thrive Fitness"
-                className="h-9 w-auto group-hover:scale-105 transition-transform duration-300"
-                style={{ filter: "invert(1) hue-rotate(180deg)" }}
-              />
+          <a href="/" className="flex items-center gap-2 mb-6 group">
+            <div className="w-9 h-9 bg-[#F40C41] rounded-lg flex items-center justify-center">
+              <Zap className="w-4 h-4 text-white fill-white" />
             </div>
+            <span className="text-xl font-black uppercase tracking-tighter text-white">
+              Thrive<span className="text-[#F40C41]">.</span>
+            </span>
           </a>
 
           {/* Desktop Nav */}
@@ -138,31 +138,40 @@ export default function Navbar() {
             </div>
 
             {/* Nav links — staggered slide from bottom */}
-            <nav className="relative z-10 flex-1 min-h-0 overflow-y-auto px-8 flex flex-col gap-1" style={{ scrollbarWidth: "none" }}>
+            <nav
+              className="relative z-10 flex-1 min-h-0 overflow-y-auto px-8 flex flex-col gap-1"
+              style={{ scrollbarWidth: "none" }}
+            >
               <div className="my-auto py-6 flex flex-col gap-1">
-              {links.map((link, i) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  initial={{ opacity: 0, y: 60 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 40 }}
-                  transition={{ delay: 0.06 * i + 0.1, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                  className="group flex items-center justify-between py-5 border-b border-white/6 last:border-0"
-                >
-                  <div className="flex items-baseline gap-4">
-                    <span className="text-[#F40C41]/40 text-xs font-black tabular-nums">
-                      {link.num}
-                    </span>
-                    <span className="text-white font-black uppercase italic tracking-tighter group-hover:text-[#F40C41] transition-colors duration-200"
-                      style={{ fontSize: "clamp(2rem, 9vw, 3rem)" }}>
-                      {link.label}
-                    </span>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-white/20 group-hover:text-[#F40C41] group-hover:translate-x-1 transition-all duration-200" />
-                </motion.a>
-              ))}
+                {links.map((link, i) => (
+                  <motion.a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    initial={{ opacity: 0, y: 60 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 40 }}
+                    transition={{
+                      delay: 0.06 * i + 0.1,
+                      duration: 0.45,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="group flex items-center justify-between py-5 border-b border-white/6 last:border-0"
+                  >
+                    <div className="flex items-baseline gap-4">
+                      <span className="text-[#F40C41]/40 text-xs font-black tabular-nums">
+                        {link.num}
+                      </span>
+                      <span
+                        className="text-white font-black uppercase italic tracking-tighter group-hover:text-[#F40C41] transition-colors duration-200"
+                        style={{ fontSize: "clamp(2rem, 9vw, 3rem)" }}
+                      >
+                        {link.label}
+                      </span>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-white/20 group-hover:text-[#F40C41] group-hover:translate-x-1 transition-all duration-200" />
+                  </motion.a>
+                ))}
               </div>
             </nav>
 
@@ -171,7 +180,11 @@ export default function Navbar() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ delay: 0.45, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                delay: 0.45,
+                duration: 0.4,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="relative z-10 px-6 pb-10 pt-4"
             >
               <a
