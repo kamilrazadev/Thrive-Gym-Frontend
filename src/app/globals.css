@@ -61,3 +61,15 @@
     border-radius: 2px;
   }
 }
+
+@media (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-style: italic;
+    font-weight: 800;
+  }
+}

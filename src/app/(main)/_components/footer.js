@@ -40,8 +40,8 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-white/5 pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-black border-t border-white/5 pt-20 pb-10 overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Top section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
           {/* Brand */}
@@ -100,11 +100,15 @@ export default function Footer() {
             © {new Date().getFullYear()} Thrive Fitness. All rights reserved.
           </p>
           <p className="text-white/20 text-xs font-medium uppercase tracking-widest">
-            Designed by{" "}
-            <span className="text-[#F40C41] font-black">Devave Global</span>
+            Built for strength. Powered by consistency.
           </p>
         </div>
+
       </div>
+
+      <p className="pointer-events-none select-none absolute bottom-0 left-1/2 -translate-x-1/2 whitespace-nowrap uppercase font-black tracking-[0.16em] leading-none text-[clamp(2.4rem,12vw,10rem)] bg-linear-to-t from-white/8 via-white/3 to-transparent text-transparent bg-clip-text">
+        THRIVE FITNESS
+      </p>
     </footer>
   );
 }

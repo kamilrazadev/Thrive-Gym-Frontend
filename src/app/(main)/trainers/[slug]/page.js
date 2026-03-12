@@ -247,14 +247,14 @@ export default async function TrainerPage({ params }) {
             </div>
 
             {/* Trainer photo */}
-            <div className="relative hidden lg:block">
+            <div className="relative w-full max-w-sm mx-auto lg:max-w-none lg:mx-0">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="w-64 h-64 bg-[#F40C41]/20 blur-[80px] rounded-full" />
               </div>
               <img
                 src={trainer.image}
                 alt={trainer.name}
-                className="relative w-full h-[440px] object-cover object-top rounded-[28px] border border-white/10"
+                className="relative w-full h-90 sm:h-105 lg:h-110 object-cover object-top rounded-[28px] border border-white/10"
                 style={{ filter: "grayscale(30%)" }}
               />
               {/* Social icons */}

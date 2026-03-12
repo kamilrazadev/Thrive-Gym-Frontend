@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, Zap } from "lucide-react";
 
 const links = [
   { label: "Classes", hash: "#classes", num: "01" },
@@ -20,6 +20,22 @@ export default function Navbar() {
 
   // On home page use bare hash so scroll is smooth; on other pages go home first
   const href = (hash) => (pathname === "/" ? hash : `/${hash}`);
+
+  const goToSection = (event, hash) => {
+    event.preventDefault();
+    setOpen(false);
+
+    if (pathname === "/") {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.history.replaceState(null, "", hash);
+        return;
+      }
+    }
+
+    window.location.href = `/${hash}`;
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -60,7 +76,8 @@ export default function Navbar() {
             {links.map((link) => (
               <a
                 key={link.label}
-                href={link.href}
+                href={href(link.hash)}
+                onClick={(event) => goToSection(event, link.hash)}
                 className="relative text-white/45 hover:text-white text-sm font-bold uppercase tracking-widest transition-colors duration-200 group"
               >
                 {link.label}
@@ -71,7 +88,8 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <a
-            href="#membership"
+            href={href("#membership")}
+            onClick={(event) => goToSection(event, "#membership")}
             className="hidden md:flex items-center gap-2 bg-[#F40C41] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-xs px-6 py-3 rounded-full transition-all duration-300 hover:shadow-[0_0_28px_rgba(244,12,65,0.5)] hover:-translate-y-px"
           >
             Get Started
@@ -146,8 +164,8 @@ export default function Navbar() {
                 {links.map((link, i) => (
                   <motion.a
                     key={link.label}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
+                    href={href(link.hash)}
+                    onClick={(event) => goToSection(event, link.hash)}
                     initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 40 }}
@@ -188,8 +206,8 @@ export default function Navbar() {
               className="relative z-10 px-6 pb-10 pt-4"
             >
               <a
-                href="#membership"
-                onClick={() => setOpen(false)}
+                href={href("#membership")}
+                onClick={(event) => goToSection(event, "#membership")}
                 className="flex items-center justify-center gap-3 w-full bg-[#F40C41] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-sm py-5 rounded-2xl transition-all shadow-[0_0_40px_rgba(244,12,65,0.35)]"
               >
                 Start Training Today
