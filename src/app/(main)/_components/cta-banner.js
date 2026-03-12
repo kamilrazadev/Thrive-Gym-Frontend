@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -23,7 +23,7 @@ export default function CtaBanner() {
             backgroundAttachment: "fixed",
           }}
         >
-          <div className="absolute inset-0 bg-[#F40C41]/85" />
+          <div className="absolute inset-0 bg-[#F40532]/85" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
 
           {/* Content */}
@@ -33,16 +33,19 @@ export default function CtaBanner() {
                 <p className="text-white/70 font-black uppercase tracking-[0.35em] text-xs mb-2">
                   Limited Spots Available
                 </p>
-                <h2 className="text-white font-black uppercase italic tracking-tighter leading-none"
-                  style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+                <h2
+                  className="text-white font-black uppercase tracking-[4px] leading-none"
+                  style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
+                >
                   YOUR FIRST WEEK IS FREE.
-                  <br />NO EXCUSES.
+                  <br />
+                  NO EXCUSES.
                 </h2>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <a
                   href="#membership"
-                  className="group flex items-center gap-2 bg-white text-[#F40C41] hover:bg-white/90 font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-0.5"
+                  className="group flex items-center gap-2 bg-white text-[#F40532] hover:bg-white/90 font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-0.5"
                 >
                   Secure Your Spot
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

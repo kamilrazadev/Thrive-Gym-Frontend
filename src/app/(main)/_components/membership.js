@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Check, X, Zap, Crown, Flame } from "lucide-react";
@@ -47,8 +47,7 @@ const plans = [
     name: "Elite",
     price: "149",
     icon: Crown,
-    description:
-      "For serious athletes demanding the absolute best.",
+    description: "For serious athletes demanding the absolute best.",
     features: [
       "Everything in Thrive",
       "Unlimited Personal Training",
@@ -66,27 +65,30 @@ const plans = [
 
 export default function Membership() {
   return (
-    <section className="py-10 md:py-16 relative overflow-hidden bg-black" id="membership">
+    <section
+      className="py-10 md:py-16 relative overflow-hidden bg-black"
+      id="membership"
+    >
       {/* Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#F40C41]/6 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#F40532]/6 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-4 mb-14">
           <div className="flex items-center gap-3">
-            <span className="w-10 h-[2px] bg-[#F40C41]" />
-            <span className="text-[#F40C41] font-black text-xs uppercase tracking-[0.35em]">
+            <span className="w-10 h-[2px] bg-[#F40532]" />
+            <span className="text-[#F40532] font-black text-xs uppercase tracking-[0.35em]">
               Membership Plans
             </span>
-            <span className="w-10 h-[2px] bg-[#F40C41]" />
+            <span className="w-10 h-[2px] bg-[#F40532]" />
           </div>
           <h2
-            className="font-black uppercase tracking-tighter leading-[0.9] text-white"
+            className="font-black uppercase tracking-[4px] leading-[0.9] text-white"
             style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
           >
             INVEST IN
             <br />
-            <span className="text-[#F40C41]">YOUR BEST SELF</span>
+            <span className="text-[#F40532]">YOUR BEST SELF</span>
           </h2>
           <p className="text-white/40 max-w-lg font-medium text-lg leading-relaxed">
             No contracts. No hidden fees. Cancel anytime. Just results and a
@@ -105,13 +107,13 @@ export default function Membership() {
               viewport={{ once: true }}
               className={`relative rounded-[36px] p-8 flex flex-col border transition-all ${
                 plan.popular
-                  ? "bg-[#F40C41]/8 border-[#F40C41]/60 shadow-[0_0_60px_rgba(244,12,65,0.12)] md:-mt-4 md:pb-12 md:pt-12"
+                  ? "bg-[#F40532]/8 border-[#F40532]/60 shadow-[0_0_60px_rgba(244,5,50,0.12)] md:-mt-4 md:pb-12 md:pt-12"
                   : "bg-white/2 border-white/8 hover:border-white/15"
               }`}
             >
               {/* Popular badge */}
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#F40C41] text-white text-[10px] font-black uppercase tracking-widest px-5 py-2 rounded-full whitespace-nowrap shadow-lg shadow-[#F40C41]/40">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#F40532] text-white text-[10px] font-black uppercase tracking-widest px-5 py-2 rounded-full whitespace-nowrap shadow-lg shadow-[#F40532]/40">
                   Most Popular
                 </div>
               )}
@@ -119,7 +121,7 @@ export default function Membership() {
               {/* Icon + name */}
               <div
                 className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${
-                  plan.popular ? "bg-[#F40C41]" : "bg-white/6"
+                  plan.popular ? "bg-[#F40532]" : "bg-white/6"
                 }`}
               >
                 <plan.icon
@@ -127,12 +129,12 @@ export default function Membership() {
                 />
               </div>
 
-              <h3 className="text-xl font-black text-white uppercase italic tracking-widest mb-1">
+              <h3 className="text-xl font-black text-white uppercase tracking-widest mb-1">
                 {plan.name}
               </h3>
 
               <div className="flex items-baseline gap-1 mb-3">
-                <span className="text-5xl font-black text-white italic tracking-tighter">
+                <span className="text-5xl font-black text-white tracking-[4px]">
                   ${plan.price}
                 </span>
                 <span className="text-white/25 font-bold uppercase tracking-widest text-xs">
@@ -150,14 +152,16 @@ export default function Membership() {
                   <div key={f} className="flex items-start gap-3">
                     <div
                       className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                        plan.popular ? "bg-[#F40C41]/20" : "bg-white/6"
+                        plan.popular ? "bg-[#F40532]/20" : "bg-white/6"
                       }`}
                     >
                       <Check
-                        className={`w-3 h-3 ${plan.popular ? "text-[#F40C41]" : "text-white/50"}`}
+                        className={`w-3 h-3 ${plan.popular ? "text-[#F40532]" : "text-white/50"}`}
                       />
                     </div>
-                    <span className="text-white/70 text-sm font-medium">{f}</span>
+                    <span className="text-white/70 text-sm font-medium">
+                      {f}
+                    </span>
                   </div>
                 ))}
                 {plan.notIncluded.map((f) => (
@@ -175,7 +179,7 @@ export default function Membership() {
               <button
                 className={`w-full py-4 rounded-2xl font-black uppercase tracking-widest text-sm transition-all duration-300 ${
                   plan.popular
-                    ? "bg-[#F40C41] text-white hover:bg-[#d00a37] hover:shadow-[0_8px_30px_rgba(244,12,65,0.4)] hover:-translate-y-0.5"
+                    ? "bg-[#F40532] text-white hover:bg-[#d00a37] hover:shadow-[0_8px_30px_rgba(244,5,50,0.4)] hover:-translate-y-0.5"
                     : "bg-white/5 text-white hover:bg-white/10 border border-white/8"
                 }`}
               >

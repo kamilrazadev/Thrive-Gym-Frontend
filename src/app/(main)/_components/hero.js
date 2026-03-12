@@ -21,14 +21,13 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 
       {/* Red glow orbs */}
-      <div className="absolute z-0 bottom-[-80px] left-[-80px] w-[700px] h-[700px] rounded-full bg-[#F40C41]/18 blur-[150px]" />
-      <div className="absolute z-0 top-[-80px] right-[20%] w-[400px] h-[400px] rounded-full bg-[#F40C41]/8 blur-[120px]" />
+      <div className="absolute z-0 bottom-[-80px] left-[-80px] w-[700px] h-[700px] rounded-full bg-[#F40532]/18 blur-[150px]" />
+      <div className="absolute z-0 top-[-80px] right-[20%] w-[400px] h-[400px] rounded-full bg-[#F40532]/8 blur-[120px]" />
 
       {/* Main content */}
       <div className="relative z-10 flex-1 flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full pt-28 pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 items-center">
-
             {/* Left */}
             <div>
               <motion.div
@@ -37,8 +36,8 @@ export default function Hero() {
                 transition={{ duration: 0.5 }}
                 className="flex items-center gap-3 mb-6"
               >
-                <span className="w-10 h-[2px] bg-[#F40C41]" />
-                <span className="text-[#F40C41] font-black text-xs uppercase tracking-[0.35em]">
+                <span className="w-10 h-[2px] bg-[#F40532]" />
+                <span className="text-[#F40532] font-black text-xs uppercase tracking-[0.35em]">
                   Thrive Fitness — Est. 2012
                 </span>
               </motion.div>
@@ -47,14 +46,14 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="font-black italic uppercase tracking-tighter leading-[0.88] mb-6"
+                className="font-black uppercase tracking-[4px] leading-[0.88] mb-6"
                 style={{ fontSize: "clamp(3.5rem, 8vw, 8rem)" }}
               >
                 <span className="block text-white">FORGE YOUR</span>
-                <span className="block text-[#F40C41]">STRONGEST</span>
+                <span className="block text-[#F40532]">STRONGEST</span>
                 <span
                   className="block text-transparent"
-                  style={{ WebkitTextStroke: "2px rgba(255,255,255,0.35)" }}
+                  style={{ WebkitTextStroke: ".5px rgba(255,255,255,0.35)" }}
                 >
                   SELF
                 </span>
@@ -79,7 +78,7 @@ export default function Hero() {
               >
                 <a
                   href="#membership"
-                  className="group flex items-center gap-2 bg-[#F40C41] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(244,12,65,0.45)] hover:shadow-[0_0_50px_rgba(244,12,65,0.65)] hover:-translate-y-0.5"
+                  className="group flex items-center gap-2 bg-[#F40532] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(244,5,50,0.45)] hover:shadow-[0_0_50px_rgba(244,5,50,0.65)] hover:-translate-y-0.5"
                 >
                   Transform Your Body
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -108,8 +107,12 @@ export default function Hero() {
                   { v: "12yr", l: "Experience" },
                 ].map((s, i) => (
                   <div key={i} className="flex flex-col">
-                    <span className="text-2xl font-black text-white leading-none">{s.v}</span>
-                    <span className="text-white/35 text-[11px] font-bold uppercase tracking-widest">{s.l}</span>
+                    <span className="text-2xl font-black text-white leading-none">
+                      {s.v}
+                    </span>
+                    <span className="text-white/35 text-[11px] font-bold uppercase tracking-widest">
+                      {s.l}
+                    </span>
                   </div>
                 ))}
               </motion.div>
@@ -130,7 +133,9 @@ export default function Hero() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <span className="absolute bottom-3 left-4 text-white font-black text-xs uppercase tracking-widest">HIIT Training</span>
+                <span className="absolute bottom-3 left-4 text-white font-black text-xs uppercase tracking-widest">
+                  HIIT Training
+                </span>
               </div>
 
               {/* Two side-by-side */}
@@ -143,7 +148,9 @@ export default function Hero() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <span className="absolute bottom-2 left-3 text-white font-black text-[10px] uppercase tracking-widest">Strength</span>
+                  <span className="absolute bottom-2 left-3 text-white font-black text-[10px] uppercase tracking-widest">
+                    Strength
+                  </span>
                 </div>
                 {/* CrossFit — replaces broken boxing */}
                 <div className="relative rounded-2xl overflow-hidden h-36 shadow-xl">
@@ -153,12 +160,14 @@ export default function Hero() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <span className="absolute bottom-2 left-3 text-white font-black text-[10px] uppercase tracking-widest">CrossFit</span>
+                  <span className="absolute bottom-2 left-3 text-white font-black text-[10px] uppercase tracking-widest">
+                    CrossFit
+                  </span>
                 </div>
               </div>
 
               {/* Community badge */}
-              <div className="flex items-center justify-between bg-[#F40C41]/15 backdrop-blur-sm border border-[#F40C41]/25 rounded-2xl p-4">
+              <div className="flex items-center justify-between bg-[#F40532]/15 backdrop-blur-sm border border-[#F40532]/25 rounded-2xl p-4">
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4].map((i) => (
                     <img
@@ -171,7 +180,9 @@ export default function Hero() {
                 </div>
                 <div className="text-right">
                   <p className="text-white font-black text-sm">5,000+ Strong</p>
-                  <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Active community</p>
+                  <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">
+                    Active community
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -198,8 +209,12 @@ export default function Hero() {
                 i > 0 ? "border-l border-white/8" : ""
               }`}
             >
-              <span className="text-base sm:text-lg font-black text-white leading-none">{s.v}</span>
-              <span className="text-white/30 text-[9px] font-bold uppercase tracking-widest mt-1">{s.l}</span>
+              <span className="text-base sm:text-lg font-black text-white leading-none">
+                {s.v}
+              </span>
+              <span className="text-white/30 text-[9px] font-bold uppercase tracking-widest mt-1">
+                {s.l}
+              </span>
             </div>
           ))}
         </div>
@@ -211,7 +226,9 @@ export default function Hero() {
         transition={{ delay: 1.5, duration: 2, repeat: Infinity }}
         className="absolute bottom-16 right-10 z-10 hidden md:flex flex-col items-center gap-1"
       >
-        <span className="text-white/20 text-[9px] font-black uppercase tracking-[0.4em]">scroll</span>
+        <span className="text-white/20 text-[9px] font-black uppercase tracking-[0.4em]">
+          scroll
+        </span>
         <ChevronDown className="w-4 h-4 text-white/20" />
       </motion.div>
     </section>

@@ -1,5 +1,15 @@
 import { notFound } from "next/navigation";
-import { Instagram, Facebook, Twitter, ArrowLeft, Clock, Users, Award, Star, ChevronRight } from "lucide-react";
+import {
+  Instagram,
+  Facebook,
+  Twitter,
+  ArrowLeft,
+  Clock,
+  Users,
+  Award,
+  Star,
+  ChevronRight,
+} from "lucide-react";
 import Link from "next/link";
 
 const trainersData = [
@@ -10,8 +20,10 @@ const trainersData = [
     specialty: "Powerlifting & Olympic Lifting",
     exp: "8 Yrs",
     classes: 12,
-    image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=1200&auto=format&fit=crop",
-    heroBg: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2000&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=1200&auto=format&fit=crop",
+    heroBg:
+      "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2000&auto=format&fit=crop",
     bio: "Marcus Cole is one of the most respected strength coaches in the city, with 8 years of hands-on experience transforming athletes of every level. A former competitive powerlifter with a national ranking, Marcus brings real-world competitive experience into every session he delivers at Thrive Fitness.",
     bio2: "His programming philosophy is simple: master the basics, train with intent, and progress will follow. Whether you're picking up a barbell for the first time or preparing for your next competition, Marcus builds programmes that are structured, measurable, and relentlessly effective.",
     certifications: [
@@ -33,11 +45,27 @@ const trainersData = [
       "Speaker at National Strength & Conditioning Conference 2023",
     ],
     featuredClasses: [
-      { name: "Powerlifting Foundations", duration: "60 min", spots: 8, time: "6:30 AM (THU)" },
-      { name: "Olympic Lifting Clinic", duration: "75 min", spots: 6, time: "12:00 PM (MON)" },
-      { name: "Strength & Conditioning", duration: "55 min", spots: 7, time: "1:00 PM (TUE)" },
+      {
+        name: "Powerlifting Foundations",
+        duration: "60 min",
+        spots: 8,
+        time: "6:30 AM (THU)",
+      },
+      {
+        name: "Olympic Lifting Clinic",
+        duration: "75 min",
+        spots: 6,
+        time: "12:00 PM (MON)",
+      },
+      {
+        name: "Strength & Conditioning",
+        duration: "55 min",
+        spots: 7,
+        time: "1:00 PM (TUE)",
+      },
     ],
-    quote: "Strength isn't built in comfort zones. Every rep, every set — you're either earning it or you're not.",
+    quote:
+      "Strength isn't built in comfort zones. Every rep, every set — you're either earning it or you're not.",
   },
   {
     slug: "elena-torres",
@@ -46,8 +74,10 @@ const trainersData = [
     specialty: "Metabolic Conditioning",
     exp: "6 Yrs",
     classes: 16,
-    image: "https://images.unsplash.com/photo-1611672585731-fa10603fb9e0?q=80&w=1200&auto=format&fit=crop",
-    heroBg: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=2000&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1611672585731-fa10603fb9e0?q=80&w=1200&auto=format&fit=crop",
+    heroBg:
+      "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=2000&auto=format&fit=crop",
     bio: "Elena Torres is a high-energy HIIT specialist who has built a reputation as one of Thrive's most electrifying coaches. With 6 years in the fitness industry and a background in competitive athletics, Elena brings intensity, precision, and infectious enthusiasm to every class she runs.",
     bio2: "Her metabolic conditioning programmes are scientifically designed to maximise calorie burn, build cardiovascular endurance, and develop lean muscle — all at once. Elena's classes are known for being tough, smart, and genuinely fun. Her members don't just come back — they bring friends.",
     certifications: [
@@ -69,11 +99,27 @@ const trainersData = [
       "Sports Science degree — University of Madrid",
     ],
     featuredClasses: [
-      { name: "Morning HIIT", duration: "45 min", spots: 8, time: "6:00 AM (MON/WED)" },
-      { name: "HIIT Blast", duration: "45 min", spots: 10, time: "7:00 PM (MON)" },
-      { name: "Functional Fit", duration: "50 min", spots: 9, time: "10:00 AM (THU)" },
+      {
+        name: "Morning HIIT",
+        duration: "45 min",
+        spots: 8,
+        time: "6:00 AM (MON/WED)",
+      },
+      {
+        name: "HIIT Blast",
+        duration: "45 min",
+        spots: 10,
+        time: "7:00 PM (MON)",
+      },
+      {
+        name: "Functional Fit",
+        duration: "50 min",
+        spots: 9,
+        time: "10:00 AM (THU)",
+      },
     ],
-    quote: "You don't have to be great to start. But you have to start to be great. Now let's move.",
+    quote:
+      "You don't have to be great to start. But you have to start to be great. Now let's move.",
   },
   {
     slug: "dax-merritt",
@@ -82,8 +128,10 @@ const trainersData = [
     specialty: "Combat Fitness & Striking",
     exp: "10 Yrs",
     classes: 10,
-    image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1200&auto=format&fit=crop",
-    heroBg: "https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=2000&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1200&auto=format&fit=crop",
+    heroBg:
+      "https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=2000&auto=format&fit=crop",
     bio: "With 10 years in boxing and combat sports coaching, Dax Merritt is the most experienced striking coach on the Thrive roster. A former amateur boxing champion, Dax transitioned to full-time coaching to share the discipline, confidence, and conditioning that combat sports build — with everyone.",
     bio2: "Dax's sessions combine technical striking, footwork, defensive movement, and metabolic conditioning into high-energy classes that are as mentally demanding as they are physical. His clients range from complete beginners to semi-professional fighters — and he meets each one exactly where they are.",
     certifications: [
@@ -105,11 +153,27 @@ const trainersData = [
       "Featured coach on SportsFit TV's 'Real Coaches' series",
     ],
     featuredClasses: [
-      { name: "Boxing Basics", duration: "50 min", spots: 6, time: "5:30 PM (MON)" },
-      { name: "Boxing Combo", duration: "50 min", spots: 8, time: "12:30 PM (WED)" },
-      { name: "Kickboxing", duration: "55 min", spots: 4, time: "6:00 PM (THU)" },
+      {
+        name: "Boxing Basics",
+        duration: "50 min",
+        spots: 6,
+        time: "5:30 PM (MON)",
+      },
+      {
+        name: "Boxing Combo",
+        duration: "50 min",
+        spots: 8,
+        time: "12:30 PM (WED)",
+      },
+      {
+        name: "Kickboxing",
+        duration: "55 min",
+        spots: 4,
+        time: "6:00 PM (THU)",
+      },
     ],
-    quote: "Boxing isn't about aggression. It's about discipline, timing, and having the courage to face what's in front of you.",
+    quote:
+      "Boxing isn't about aggression. It's about discipline, timing, and having the courage to face what's in front of you.",
   },
   {
     slug: "sofia-james",
@@ -118,8 +182,10 @@ const trainersData = [
     specialty: "Flexibility & Recovery",
     exp: "7 Yrs",
     classes: 14,
-    image: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=1200&auto=format&fit=crop",
-    heroBg: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=1200&auto=format&fit=crop",
+    heroBg:
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop",
     bio: "Sofia James is Thrive's lead yoga and mobility specialist, bringing 7 years of dedicated practice and teaching to every session. Trained in Vinyasa, Yin, and restorative yoga traditions, Sofia holds a 500-hour Registered Yoga Teacher certification and has studied with teachers across Europe and Southeast Asia.",
     bio2: "Sofia's approach bridges the gap between performance and recovery. Her classes attract everyone from elite athletes looking to improve mobility and prevent injury, to members seeking mindfulness, stress relief, and a deeper connection between body and mind. Her sessions are calm, precise, and genuinely transformative.",
     certifications: [
@@ -141,11 +207,27 @@ const trainersData = [
       "Meditation & Mindfulness Lead at Thrive since 2020",
     ],
     featuredClasses: [
-      { name: "Yoga Flow", duration: "60 min", spots: 12, time: "9:00 AM (MON)" },
-      { name: "Yoga Foundations", duration: "60 min", spots: 16, time: "1:00 PM (THU)" },
-      { name: "Sunrise Yoga", duration: "60 min", spots: 22, time: "9:00 AM (SUN)" },
+      {
+        name: "Yoga Flow",
+        duration: "60 min",
+        spots: 12,
+        time: "9:00 AM (MON)",
+      },
+      {
+        name: "Yoga Foundations",
+        duration: "60 min",
+        spots: 16,
+        time: "1:00 PM (THU)",
+      },
+      {
+        name: "Sunrise Yoga",
+        duration: "60 min",
+        spots: 22,
+        time: "9:00 AM (SUN)",
+      },
     ],
-    quote: "The body keeps the score. Give it the rest, attention, and movement it deserves — and it will give you everything back.",
+    quote:
+      "The body keeps the score. Give it the rest, attention, and movement it deserves — and it will give you everything back.",
   },
 ];
 
@@ -196,14 +278,14 @@ export default async function TrainerPage({ params }) {
           style={{
             backgroundImage: `url('${trainer.heroBg}')`,
             backgroundSize: "cover",
-            backgroundPosition: "center 30%",
+            backgroundPosition: "top center",
           }}
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
         {/* Red glow */}
-        <div className="absolute bottom-0 left-0 w-[600px] h-[400px] bg-[#F40C41]/15 blur-[130px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[400px] bg-[#F40532]/15 blur-[130px] rounded-full pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 pt-32 w-full">
           <Link
@@ -218,18 +300,20 @@ export default async function TrainerPage({ params }) {
             {/* Text */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-10 h-[2px] bg-[#F40C41]" />
-                <span className="text-[#F40C41] font-black text-xs uppercase tracking-[0.35em]">
+                <span className="w-10 h-[2px] bg-[#F40532]" />
+                <span className="text-[#F40532] font-black text-xs uppercase tracking-[0.35em]">
                   {trainer.role}
                 </span>
               </div>
               <h1
-                className="font-black italic uppercase tracking-tighter leading-[0.88] text-white mb-4"
+                className="font-black uppercase tracking-[4px] leading-[0.88] text-white mb-4"
                 style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)" }}
               >
                 {trainer.name.split(" ")[0]}
                 <br />
-                <span className="text-[#F40C41]">{trainer.name.split(" ")[1]}</span>
+                <span className="text-[#F40532]">
+                  {trainer.name.split(" ")[1]}
+                </span>
               </h1>
               <p className="text-white/55 text-lg font-medium max-w-xl leading-relaxed italic">
                 "{trainer.quote}"
@@ -239,8 +323,12 @@ export default async function TrainerPage({ params }) {
               <div className="flex flex-wrap gap-6 mt-8 pt-8 border-t border-white/8">
                 {trainer.stats.map((s) => (
                   <div key={s.l}>
-                    <p className="text-2xl font-black text-white leading-none">{s.v}</p>
-                    <p className="text-white/30 text-[10px] font-bold uppercase tracking-widest mt-0.5">{s.l}</p>
+                    <p className="text-2xl font-black text-white leading-none">
+                      {s.v}
+                    </p>
+                    <p className="text-white/30 text-[10px] font-bold uppercase tracking-widest mt-0.5">
+                      {s.l}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -249,7 +337,7 @@ export default async function TrainerPage({ params }) {
             {/* Trainer photo */}
             <div className="relative w-full max-w-sm mx-auto lg:max-w-none lg:mx-0">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-64 h-64 bg-[#F40C41]/20 blur-[80px] rounded-full" />
+                <div className="w-64 h-64 bg-[#F40532]/20 blur-[80px] rounded-full" />
               </div>
               <img
                 src={trainer.image}
@@ -259,9 +347,12 @@ export default async function TrainerPage({ params }) {
               />
               {/* Social icons */}
               <div className="absolute bottom-4 left-4 right-4 flex justify-center">
-                <div className="flex items-center gap-1 bg-[#F40C41] p-2 rounded-2xl shadow-2xl shadow-[#F40C41]/30">
+                <div className="flex items-center gap-1 bg-[#F40532] p-2 rounded-2xl shadow-2xl shadow-[#F40532]/30">
                   {[Instagram, Facebook, Twitter].map((Icon, idx) => (
-                    <button key={idx} className="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors">
+                    <button
+                      key={idx}
+                      className="w-9 h-9 rounded-xl bg-white/15 hover:bg-white/25 flex items-center justify-center transition-colors"
+                    >
                       <Icon className="w-4 h-4 text-white" />
                     </button>
                   ))}
@@ -279,19 +370,25 @@ export default async function TrainerPage({ params }) {
             {/* Bio */}
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-10 h-[2px] bg-[#F40C41]" />
-                <span className="text-[#F40C41] font-black text-xs uppercase tracking-[0.35em]">About</span>
+                <span className="w-10 h-[2px] bg-[#F40532]" />
+                <span className="text-[#F40532] font-black text-xs uppercase tracking-[0.35em]">
+                  About
+                </span>
               </div>
               <h2
-                className="font-black italic uppercase tracking-tighter leading-[0.9] text-white mb-6"
+                className="font-black uppercase tracking-[4px] leading-[0.9] text-white mb-6"
                 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)" }}
               >
                 THE STORY BEHIND
                 <br />
-                <span className="text-[#F40C41]">THE COACH</span>
+                <span className="text-[#F40532]">THE COACH</span>
               </h2>
-              <p className="text-white/55 text-base leading-relaxed font-medium mb-5">{trainer.bio}</p>
-              <p className="text-white/35 text-base leading-relaxed font-medium">{trainer.bio2}</p>
+              <p className="text-white/55 text-base leading-relaxed font-medium mb-5">
+                {trainer.bio}
+              </p>
+              <p className="text-white/35 text-base leading-relaxed font-medium">
+                {trainer.bio2}
+              </p>
 
               {/* Achievements */}
               <div className="mt-8">
@@ -301,10 +398,12 @@ export default async function TrainerPage({ params }) {
                 <div className="flex flex-col gap-3">
                   {trainer.achievements.map((a, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-[#F40C41]/20 border border-[#F40C41]/30 flex items-center justify-center shrink-0 mt-0.5">
-                        <Award className="w-3 h-3 text-[#F40C41]" />
+                      <div className="w-5 h-5 rounded-full bg-[#F40532]/20 border border-[#F40532]/30 flex items-center justify-center shrink-0 mt-0.5">
+                        <Award className="w-3 h-3 text-[#F40532]" />
                       </div>
-                      <span className="text-white/60 text-sm font-medium">{a}</span>
+                      <span className="text-white/60 text-sm font-medium">
+                        {a}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -316,8 +415,8 @@ export default async function TrainerPage({ params }) {
               {/* Certs card */}
               <div className="rounded-[24px] border border-white/8 bg-white/2 p-6">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-9 h-9 rounded-xl bg-[#F40C41]/15 border border-[#F40C41]/25 flex items-center justify-center">
-                    <Star className="w-4 h-4 text-[#F40C41]" />
+                  <div className="w-9 h-9 rounded-xl bg-[#F40532]/15 border border-[#F40532]/25 flex items-center justify-center">
+                    <Star className="w-4 h-4 text-[#F40532]" />
                   </div>
                   <h3 className="text-white font-black uppercase tracking-widest text-sm">
                     Certifications
@@ -326,19 +425,21 @@ export default async function TrainerPage({ params }) {
                 <div className="flex flex-col gap-3">
                   {trainer.certifications.map((cert, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <ChevronRight className="w-4 h-4 text-[#F40C41] shrink-0 mt-0.5" />
-                      <span className="text-white/55 text-sm font-medium leading-relaxed">{cert}</span>
+                      <ChevronRight className="w-4 h-4 text-[#F40532] shrink-0 mt-0.5" />
+                      <span className="text-white/55 text-sm font-medium leading-relaxed">
+                        {cert}
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Specialty tag */}
-              <div className="rounded-[24px] border border-[#F40C41]/20 bg-[#F40C41]/5 p-6">
-                <p className="text-[#F40C41] font-black uppercase tracking-widest text-xs mb-2">
+              <div className="rounded-[24px] border border-[#F40532]/20 bg-[#F40532]/5 p-6">
+                <p className="text-[#F40532] font-black uppercase tracking-widest text-xs mb-2">
                   Specialty
                 </p>
-                <p className="text-white font-black text-xl uppercase italic tracking-tighter">
+                <p className="text-white font-black text-xl uppercase tracking-[4px]">
                   {trainer.specialty}
                 </p>
               </div>
@@ -346,7 +447,7 @@ export default async function TrainerPage({ params }) {
               {/* Book CTA */}
               <a
                 href="#contact"
-                className="flex items-center justify-center gap-2 bg-[#F40C41] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-sm py-5 rounded-[24px] transition-all hover:shadow-[0_0_40px_rgba(244,12,65,0.4)] hover:-translate-y-0.5"
+                className="flex items-center justify-center gap-2 bg-[#F40532] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-sm py-5 rounded-[24px] transition-all hover:shadow-[0_0_40px_rgba(244,5,50,0.4)] hover:-translate-y-0.5"
               >
                 Book 1-on-1 Session
               </a>
@@ -359,27 +460,33 @@ export default async function TrainerPage({ params }) {
       <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-3 mb-8">
-            <span className="w-10 h-[2px] bg-[#F40C41]" />
-            <span className="text-[#F40C41] font-black text-xs uppercase tracking-[0.35em]">Schedule</span>
+            <span className="w-10 h-[2px] bg-[#F40532]" />
+            <span className="text-[#F40532] font-black text-xs uppercase tracking-[0.35em]">
+              Schedule
+            </span>
           </div>
           <h2
-            className="font-black italic uppercase tracking-tighter leading-[0.9] text-white mb-8"
+            className="font-black uppercase tracking-[4px] leading-[0.9] text-white mb-8"
             style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
           >
             {trainer.name.split(" ")[0]}'S
             <br />
-            <span className="text-[#F40C41]">UPCOMING CLASSES</span>
+            <span className="text-[#F40532]">UPCOMING CLASSES</span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {trainer.featuredClasses.map((cls, i) => (
               <div
                 key={i}
-                className="group flex flex-col gap-3 p-5 rounded-2xl border border-white/6 bg-white/2 hover:border-[#F40C41]/30 hover:bg-[#F40C41]/4 transition-all duration-200"
+                className="group flex flex-col gap-3 p-5 rounded-2xl border border-white/6 bg-white/2 hover:border-[#F40532]/30 hover:bg-[#F40532]/4 transition-all duration-200"
               >
                 <div>
-                  <p className="text-white font-black uppercase tracking-tight text-base">{cls.name}</p>
-                  <p className="text-[#F40C41] text-xs font-black uppercase tracking-widest mt-1">{cls.time}</p>
+                  <p className="text-white font-black uppercase tracking-tight text-base">
+                    {cls.name}
+                  </p>
+                  <p className="text-[#F40532] text-xs font-black uppercase tracking-widest mt-1">
+                    {cls.time}
+                  </p>
                 </div>
                 <div className="flex items-center gap-4 pt-3 border-t border-white/6">
                   <span className="flex items-center gap-1.5 text-white/40 text-xs font-bold">
@@ -401,20 +508,21 @@ export default async function TrainerPage({ params }) {
       <section className="py-16 bg-zinc-950">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2
-            className="font-black italic uppercase tracking-tighter leading-[0.9] text-white mb-4"
+            className="font-black uppercase tracking-[4px] leading-[0.9] text-white mb-4"
             style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}
           >
             TRAIN WITH
             <br />
-            <span className="text-[#F40C41]">{trainer.name.toUpperCase()}</span>
+            <span className="text-[#F40532]">{trainer.name.toUpperCase()}</span>
           </h2>
           <p className="text-white/40 font-medium text-base mb-8 max-w-md mx-auto leading-relaxed">
-            Ready to work with one of Thrive's best? Book your first session today — no commitment needed.
+            Ready to work with one of Thrive's best? Book your first session
+            today — no commitment needed.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="/#contact"
-              className="flex items-center justify-center gap-2 bg-[#F40C41] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-sm px-10 py-4 rounded-full transition-all hover:shadow-[0_0_40px_rgba(244,12,65,0.45)] hover:-translate-y-0.5"
+              className="flex items-center justify-center gap-2 bg-[#F40532] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-sm px-10 py-4 rounded-full transition-all hover:shadow-[0_0_40px_rgba(244,5,50,0.45)] hover:-translate-y-0.5"
             >
               Book a Session
             </a>

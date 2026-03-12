@@ -32,7 +32,7 @@ export default function WelcomeAnimation() {
           {/* ── Red radial glow ── */}
           <motion.div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full pointer-events-none"
-            style={{ background: "radial-gradient(ellipse, rgba(244,12,65,0.22) 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(ellipse, rgba(244,5,50,0.22) 0%, transparent 70%)" }}
             initial={{ opacity: 0, scale: 0.4 }}
             animate={{ opacity: phase >= 2 ? 1 : 0, scale: phase >= 2 ? 1 : 0.4 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -43,8 +43,8 @@ export default function WelcomeAnimation() {
             className="absolute top-0 bottom-0 pointer-events-none"
             style={{
               width: "3px",
-              background: "linear-gradient(to bottom, transparent, #F40C41 20%, #F40C41 80%, transparent)",
-              boxShadow: "0 0 24px 4px rgba(244,12,65,0.7)",
+              background: "linear-gradient(to bottom, transparent, #F40532 20%, #F40532 80%, transparent)",
+              boxShadow: "0 0 24px 4px rgba(244,5,50,0.7)",
             }}
             initial={{ left: "-6px" }}
             animate={{ left: phase >= 1 ? "110%" : "-6px" }}
@@ -78,7 +78,7 @@ export default function WelcomeAnimation() {
             {/* Red separator */}
             <motion.div
               className="h-[1px]"
-              style={{ background: "linear-gradient(to right, transparent, #F40C41, transparent)" }}
+              style={{ background: "linear-gradient(to right, transparent, #F40532, transparent)" }}
               initial={{ width: 0, opacity: 0 }}
               animate={{
                 width: phase >= 2 && phase < 4 ? 180 : 0,
@@ -110,7 +110,7 @@ export default function WelcomeAnimation() {
               {[...Array(5)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="rounded-full border border-[#F40C41]/40"
+                  className="rounded-full border border-[#F40532]/40"
                   style={{ width: 6, height: 6 }}
                   initial={{ scale: 0 }}
                   animate={{ scale: phase >= 2 ? 1 : 0 }}
@@ -123,8 +123,8 @@ export default function WelcomeAnimation() {
           {/* ── Progress bar at bottom ── */}
           <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white/5">
             <motion.div
-              className="h-full bg-[#F40C41] origin-left"
-              style={{ boxShadow: "0 0 10px rgba(244,12,65,0.6)" }}
+              className="h-full bg-[#F40532] origin-left"
+              style={{ boxShadow: "0 0 10px rgba(244,5,50,0.6)" }}
               initial={{ scaleX: 0 }}
               animate={{ scaleX: phase >= 3 ? 1 : 0 }}
               transition={{ duration: 1.25, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -154,3 +154,4 @@ export default function WelcomeAnimation() {
     </AnimatePresence>
   );
 }
+

@@ -43,24 +43,27 @@ export default function FAQ() {
   const [open, setOpen] = useState(null);
 
   return (
-    <section className="py-10 md:py-16 bg-black relative overflow-hidden" id="faq">
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#F40C41]/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+    <section
+      className="py-10 md:py-16 bg-black relative overflow-hidden"
+      id="faq"
+    >
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#F40532]/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3 pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-4 mb-14">
           <div className="flex items-center gap-3">
-            <span className="w-10 h-[2px] bg-[#F40C41]" />
-            <span className="text-[#F40C41] font-black text-xs uppercase tracking-[0.35em]">
+            <span className="w-10 h-[2px] bg-[#F40532]" />
+            <span className="text-[#F40532] font-black text-xs uppercase tracking-[0.35em]">
               FAQ
             </span>
-            <span className="w-10 h-[2px] bg-[#F40C41]" />
+            <span className="w-10 h-[2px] bg-[#F40532]" />
           </div>
           <h2
-            className="font-black uppercase tracking-tighter leading-[0.9] text-white"
+            className="font-black uppercase tracking-[4px] leading-[0.9] text-white"
             style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
           >
-            GOT <span className="text-[#F40C41]">QUESTIONS?</span>
+            GOT <span className="text-[#F40532]">QUESTIONS?</span>
           </h2>
           <p className="text-white/40 max-w-md font-medium text-lg leading-relaxed">
             We've got answers. Can't find what you're looking for? Drop us a
@@ -79,7 +82,7 @@ export default function FAQ() {
               viewport={{ once: true }}
               className={`rounded-2xl border overflow-hidden transition-all duration-200 ${
                 open === i
-                  ? "border-[#F40C41]/35 bg-[#F40C41]/5"
+                  ? "border-[#F40532]/35 bg-[#F40532]/5"
                   : "border-white/6 bg-white/2 hover:border-white/12"
               }`}
             >
@@ -93,7 +96,7 @@ export default function FAQ() {
                 <div
                   className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
                     open === i
-                      ? "bg-[#F40C41] shadow-[0_0_12px_rgba(244,12,65,0.5)]"
+                      ? "bg-[#F40532] shadow-[0_0_12px_rgba(244,5,50,0.5)]"
                       : "bg-white/6 hover:bg-white/12"
                   }`}
                 >
@@ -126,7 +129,10 @@ export default function FAQ() {
 
         <p className="text-center text-white/25 text-sm mt-10 font-medium">
           Still have questions?{" "}
-          <a href="#contact" className="text-[#F40C41] hover:underline font-bold">
+          <a
+            href="#contact"
+            className="text-[#F40532] hover:underline font-bold"
+          >
             Contact our team →
           </a>
         </p>

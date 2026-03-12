@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
@@ -48,24 +48,27 @@ export default function Testimonials() {
   const rest = testimonials.filter((t) => !t.large);
 
   return (
-    <section className="py-10 md:py-16 relative overflow-hidden bg-zinc-950" id="testimonials">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_50%,rgba(244,12,65,0.05)_0%,transparent_65%)] pointer-events-none" />
+    <section
+      className="py-10 md:py-16 relative overflow-hidden bg-zinc-950"
+      id="testimonials"
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_50%,rgba(244,5,50,0.05)_0%,transparent_65%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-4 mb-14">
           <div className="flex items-center gap-3">
-            <span className="w-10 h-[2px] bg-[#F40C41]" />
-            <span className="text-[#F40C41] font-black text-xs uppercase tracking-[0.35em]">
+            <span className="w-10 h-[2px] bg-[#F40532]" />
+            <span className="text-[#F40532] font-black text-xs uppercase tracking-[0.35em]">
               Real Results
             </span>
-            <span className="w-10 h-[2px] bg-[#F40C41]" />
+            <span className="w-10 h-[2px] bg-[#F40532]" />
           </div>
           <h2
-            className="font-black uppercase tracking-tighter leading-[0.9] text-white"
+            className="font-black uppercase tracking-[4px] leading-[0.9] text-white"
             style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
           >
-            LIVES <span className="text-[#F40C41]">CHANGED</span>
+            LIVES <span className="text-[#F40532]">CHANGED</span>
           </h2>
         </div>
 
@@ -87,15 +90,18 @@ export default function Testimonials() {
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-transparent" />
-            <div className="absolute inset-0 bg-[#F40C41]/0 group-hover:bg-[#F40C41]/6 transition-all duration-500" />
+            <div className="absolute inset-0 bg-[#F40532]/0 group-hover:bg-[#F40532]/6 transition-all duration-500" />
 
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, s) => (
-                  <Star key={s} className="w-4 h-4 fill-[#F40C41] text-[#F40C41]" />
+                  <Star
+                    key={s}
+                    className="w-4 h-4 fill-[#F40532] text-[#F40532]"
+                  />
                 ))}
               </div>
-              <Quote className="w-12 h-12 text-[#F40C41]/25 mb-3" />
+              <Quote className="w-12 h-12 text-[#F40532]/25 mb-3" />
               <p className="text-white text-xl md:text-2xl font-bold italic leading-snug mb-7">
                 "{large.quote}"
               </p>
@@ -104,10 +110,10 @@ export default function Testimonials() {
                   <img
                     src={large.avatar}
                     alt={large.name}
-                    className="w-11 h-11 rounded-full border-2 border-[#F40C41] object-cover"
+                    className="w-11 h-11 rounded-full border-2 border-[#F40532] object-cover"
                   />
                   <div>
-                    <p className="text-white font-black uppercase italic tracking-tighter">
+                    <p className="text-white font-black uppercase tracking-[4px]">
                       {large.name}
                     </p>
                     <p className="text-white/35 text-[10px] font-bold uppercase tracking-widest">
@@ -115,7 +121,7 @@ export default function Testimonials() {
                     </p>
                   </div>
                 </div>
-                <span className="bg-[#F40C41]/20 border border-[#F40C41]/30 text-[#F40C41] text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full">
+                <span className="bg-[#F40532]/20 border border-[#F40532]/30 text-[#F40532] text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full">
                   {large.stat}
                 </span>
               </div>
@@ -131,13 +137,16 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.12 }}
                 viewport={{ once: true }}
-                className="group relative rounded-2xl p-6 border border-white/6 bg-white/2 hover:border-[#F40C41]/25 hover:bg-[#F40C41]/3 transition-all duration-300 flex-1 overflow-hidden cursor-pointer"
+                className="group relative rounded-2xl p-6 border border-white/6 bg-white/2 hover:border-[#F40532]/25 hover:bg-[#F40532]/3 transition-all duration-300 flex-1 overflow-hidden cursor-pointer"
               >
-                <Quote className="w-8 h-8 text-[#F40C41]/10 absolute top-4 right-4 group-hover:text-[#F40C41]/20 transition-colors" />
+                <Quote className="w-8 h-8 text-[#F40532]/10 absolute top-4 right-4 group-hover:text-[#F40532]/20 transition-colors" />
 
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, s) => (
-                    <Star key={s} className="w-3.5 h-3.5 fill-[#F40C41] text-[#F40C41]" />
+                    <Star
+                      key={s}
+                      className="w-3.5 h-3.5 fill-[#F40532] text-[#F40532]"
+                    />
                   ))}
                 </div>
 
@@ -153,7 +162,7 @@ export default function Testimonials() {
                       className="w-9 h-9 rounded-full border border-white/10 object-cover"
                     />
                     <div>
-                      <p className="text-white font-black uppercase italic tracking-tighter text-sm">
+                      <p className="text-white font-black uppercase tracking-[4px] text-sm">
                         {t.name}
                       </p>
                       <p className="text-white/25 text-[10px] font-bold uppercase tracking-widest">
@@ -161,7 +170,7 @@ export default function Testimonials() {
                       </p>
                     </div>
                   </div>
-                  <span className="bg-[#F40C41]/10 border border-[#F40C41]/15 text-[#F40C41] text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full whitespace-nowrap">
+                  <span className="bg-[#F40532]/10 border border-[#F40532]/15 text-[#F40532] text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full whitespace-nowrap">
                     {t.stat}
                   </span>
                 </div>

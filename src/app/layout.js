@@ -1,10 +1,16 @@
-import { Geist } from "next/font/google";
+import { Geist, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
 const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata = {
@@ -16,7 +22,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geist.variable} antialiased`}>{children}</body>
+      <body className={`${geist.variable} ${bebasNeue.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

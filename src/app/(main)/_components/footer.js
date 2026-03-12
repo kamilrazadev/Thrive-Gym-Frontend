@@ -47,11 +47,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="/" className="flex items-center gap-2 mb-6 group">
-              <div className="w-9 h-9 bg-[#F40C41] rounded-lg flex items-center justify-center">
+              <div className="w-9 h-9 bg-[#F40532] rounded-lg flex items-center justify-center">
                 <Zap className="w-4 h-4 text-white fill-white" />
               </div>
-              <span className="text-xl font-black uppercase tracking-tighter text-white">
-                Thrive<span className="text-[#F40C41]">.</span>
+              <span className="text-xl font-black uppercase tracking-[4px] text-white">
+                Thrive<span className="text-[#F40532]">.</span>
               </span>
             </a>
             <p className="text-white/30 text-sm font-medium leading-relaxed max-w-xs mb-8">
@@ -64,7 +64,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href={href}
-                  className="w-9 h-9 bg-white/5 hover:bg-[#F40C41] border border-white/8 rounded-full flex items-center justify-center transition-all hover:border-transparent group"
+                  className="w-9 h-9 bg-white/5 hover:bg-[#F40532] border border-white/8 rounded-full flex items-center justify-center transition-all hover:border-transparent group"
                 >
                   <Icon className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
                 </a>
@@ -83,7 +83,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-white/30 hover:text-[#F40C41] text-sm font-medium transition-colors"
+                      className="text-white/30 hover:text-[#F40532] text-sm font-medium transition-colors"
                     >
                       {link.label}
                     </a>
@@ -103,7 +103,6 @@ export default function Footer() {
             Built for strength. Powered by consistency.
           </p>
         </div>
-
       </div>
 
       <p className="pointer-events-none select-none absolute bottom-0 left-1/2 -translate-x-1/2 whitespace-nowrap uppercase font-black tracking-[0.16em] leading-none text-[clamp(2.4rem,12vw,10rem)] bg-linear-to-t from-white/8 via-white/3 to-transparent text-transparent bg-clip-text">

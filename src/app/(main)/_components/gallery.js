@@ -70,16 +70,18 @@ function GalleryImg({ src, label, className }) {
       />
       {/* Hover overlays */}
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-400" />
-      <div className="absolute inset-0 bg-[#F40C41]/0 group-hover:bg-[#F40C41]/10 transition-all duration-400" />
+      <div className="absolute inset-0 bg-[#F40532]/0 group-hover:bg-[#F40532]/10 transition-all duration-400" />
 
       {/* Label */}
       <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out">
-        <p className="text-white font-black uppercase tracking-widest text-xs">{label}</p>
+        <p className="text-white font-black uppercase tracking-widest text-xs">
+          {label}
+        </p>
       </div>
 
       {/* Instagram icon */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all duration-300">
-        <div className="w-10 h-10 rounded-full bg-[#F40C41] flex items-center justify-center shadow-lg shadow-[#F40C41]/40">
+        <div className="w-10 h-10 rounded-full bg-[#F40532] flex items-center justify-center shadow-lg shadow-[#F40532]/40">
           <Instagram className="w-4 h-4 text-white" />
         </div>
       </div>
@@ -95,28 +97,29 @@ export default function Gallery() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-10">
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <span className="w-10 h-[2px] bg-[#F40C41]" />
-              <span className="text-[#F40C41] font-black text-xs uppercase tracking-[0.35em]">Life at Thrive</span>
+              <span className="w-10 h-[2px] bg-[#F40532]" />
+              <span className="text-[#F40532] font-black text-xs uppercase tracking-[0.35em]">
+                Life at Thrive
+              </span>
             </div>
             <h2
-              className="font-black uppercase tracking-tighter leading-[0.9] text-white"
+              className="font-black uppercase tracking-[4px] leading-[0.9] text-white"
               style={{ fontSize: "clamp(2.2rem, 4vw, 4rem)" }}
             >
-              SEE THE <span className="text-[#F40C41]">ENERGY</span>
+              SEE THE <span className="text-[#F40532]">ENERGY</span>
             </h2>
           </div>
           <a
             href="#"
-            className="flex items-center gap-2 text-white/40 hover:text-white font-bold uppercase tracking-widest text-xs transition-colors border border-white/8 hover:border-[#F40C41]/30 px-5 py-3 rounded-full group"
+            className="flex items-center gap-2 text-white/40 hover:text-white font-bold uppercase tracking-widest text-xs transition-colors border border-white/8 hover:border-[#F40532]/30 px-5 py-3 rounded-full group"
           >
-            <Instagram className="w-4 h-4 group-hover:text-[#F40C41] transition-colors" />
+            <Instagram className="w-4 h-4 group-hover:text-[#F40532] transition-colors" />
             @thrivefitness
           </a>
         </div>
 
         {/* ── Creative editorial bento grid ── */}
         <div className="flex flex-col gap-3">
-
           {/* Row 1: Wide (60%) + Tall (40%) */}
           <div className="grid grid-cols-5 gap-3 h-72 md:h-96">
             <GalleryImg
@@ -150,7 +153,7 @@ export default function Gallery() {
                   Our Space
                 </p>
                 <h3
-                  className="text-white font-black uppercase italic tracking-tighter leading-none"
+                  className="text-white font-black uppercase tracking-[4px] leading-none"
                   style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)" }}
                 >
                   {gallery.banner.label}
@@ -158,7 +161,7 @@ export default function Gallery() {
               </div>
               <a
                 href="#"
-                className="hidden md:flex items-center gap-2 bg-[#F40C41]/90 hover:bg-[#F40C41] text-white font-black uppercase tracking-widest text-xs px-5 py-3 rounded-full transition-all"
+                className="hidden md:flex items-center gap-2 bg-[#F40532]/90 hover:bg-[#F40532] text-white font-black uppercase tracking-widest text-xs px-5 py-3 rounded-full transition-all"
               >
                 <Instagram className="w-3.5 h-3.5" />
                 Follow Us
@@ -170,12 +173,36 @@ export default function Gallery() {
           <div className="grid grid-cols-4 gap-3">
             {/* Left: 3 + 3 in a 3-col sub-grid */}
             <div className="col-span-4 md:col-span-3 grid grid-cols-3 gap-3">
-              <GalleryImg src={gallery.threeA.src} label={gallery.threeA.label} className="col-span-1 rounded-2xl h-44" />
-              <GalleryImg src={gallery.threeB.src} label={gallery.threeB.label} className="col-span-1 rounded-2xl h-44" />
-              <GalleryImg src={gallery.threeC.src} label={gallery.threeC.label} className="col-span-1 rounded-2xl h-44" />
-              <GalleryImg src={gallery.fourA.src} label={gallery.fourA.label} className="col-span-1 rounded-2xl h-44" />
-              <GalleryImg src={gallery.fourB.src} label={gallery.fourB.label} className="col-span-1 rounded-2xl h-44" />
-              <GalleryImg src={gallery.fourC.src} label={gallery.fourC.label} className="col-span-1 rounded-2xl h-44" />
+              <GalleryImg
+                src={gallery.threeA.src}
+                label={gallery.threeA.label}
+                className="col-span-1 rounded-2xl h-44"
+              />
+              <GalleryImg
+                src={gallery.threeB.src}
+                label={gallery.threeB.label}
+                className="col-span-1 rounded-2xl h-44"
+              />
+              <GalleryImg
+                src={gallery.threeC.src}
+                label={gallery.threeC.label}
+                className="col-span-1 rounded-2xl h-44"
+              />
+              <GalleryImg
+                src={gallery.fourA.src}
+                label={gallery.fourA.label}
+                className="col-span-1 rounded-2xl h-44"
+              />
+              <GalleryImg
+                src={gallery.fourB.src}
+                label={gallery.fourB.label}
+                className="col-span-1 rounded-2xl h-44"
+              />
+              <GalleryImg
+                src={gallery.fourC.src}
+                label={gallery.fourC.label}
+                className="col-span-1 rounded-2xl h-44"
+              />
             </div>
 
             {/* Right: Single tall image spanning both rows */}
@@ -195,7 +222,8 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="text-center text-white/20 text-xs font-medium mt-8 uppercase tracking-widest"
         >
-          Tag us <span className="text-[#F40C41]">@thrivefitness</span> to be featured
+          Tag us <span className="text-[#F40532]">@thrivefitness</span> to be
+          featured
         </motion.p>
       </div>
     </section>

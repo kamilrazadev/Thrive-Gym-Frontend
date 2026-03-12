@@ -5,12 +5,13 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-bebas);
 }
 
 :root {
   --background: #000000;
-  --foreground: #FFFFFF;
-  --primary: #F40C41;
+  --foreground: #ffffff;
+  --primary: #f40532;
   --glass: rgba(255, 255, 255, 0.04);
 }
 
@@ -21,8 +22,9 @@
 
 /* Smooth image scale on hover for all cards */
 .img-zoom {
-  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              filter 0.5s ease;
+  transition:
+    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    filter 0.5s ease;
 }
 .img-zoom:hover {
   transform: scale(1.06);
@@ -43,8 +45,25 @@
     overflow-x: hidden;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-bebas), var(--font-geist-sans), sans-serif;
+    font-style: italic;
+    letter-spacing: 0.12em;
+    font-weight: 400;
+  }
+
+  nav a {
+    font-family: var(--font-bebas), var(--font-geist-sans), sans-serif;
+    letter-spacing: 0.08em;
+  }
+
   ::selection {
-    background-color: #F40C41;
+    background-color: #f40532;
     color: white;
   }
 
@@ -57,19 +76,24 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #F40C41;
+    background: #f40532;
     border-radius: 2px;
   }
 }
 
-@media (max-width: 767px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-style: italic;
-    font-weight: 800;
-  }
+.primary-gradient-btn {
+  background-image: linear-gradient(
+    135deg,
+    #f40532 0%,
+    #d9042f 55%,
+    #b30328 100%
+  );
+}
+
+.primary-gradient-badge {
+  background-image: linear-gradient(
+    135deg,
+    rgba(244, 5, 50, 0.95) 0%,
+    rgba(217, 4, 47, 0.92) 100%
+  );
 }

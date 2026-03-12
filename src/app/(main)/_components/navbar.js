@@ -62,12 +62,12 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 mb-6 group">
-            <div className="w-9 h-9 bg-[#F40C41] rounded-lg flex items-center justify-center">
+          <a href="/" className="flex items-center gap-2 group">
+            <div className="w-9 h-9 bg-[#F40532] rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white fill-white" />
             </div>
-            <span className="text-xl font-black uppercase tracking-tighter text-white">
-              Thrive<span className="text-[#F40C41]">.</span>
+            <span className="text-xl font-black uppercase tracking-[4px] text-white">
+              Thrive<span className="text-[#F40532]">.</span>
             </span>
           </a>
 
@@ -81,7 +81,7 @@ export default function Navbar() {
                 className="relative text-white/45 hover:text-white text-sm font-bold uppercase tracking-widest transition-colors duration-200 group"
               >
                 {link.label}
-                <span className="absolute -bottom-0.5 left-0 w-0 h-[1px] bg-[#F40C41] group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-0.5 left-0 w-0 h-[1px] bg-[#F40532] group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
@@ -90,7 +90,7 @@ export default function Navbar() {
           <a
             href={href("#membership")}
             onClick={(event) => goToSection(event, "#membership")}
-            className="hidden md:flex items-center gap-2 bg-[#F40C41] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-xs px-6 py-3 rounded-full transition-all duration-300 hover:shadow-[0_0_28px_rgba(244,12,65,0.5)] hover:-translate-y-px"
+            className="primary-gradient-btn hidden md:flex items-center gap-2 text-white font-black uppercase tracking-widest text-xs px-6 py-3 rounded-full transition-all duration-300 hover:brightness-105 hover:shadow-[0_0_28px_rgba(244,5,50,0.5)] hover:-translate-y-px"
           >
             Get Started
           </a>
@@ -130,9 +130,9 @@ export default function Navbar() {
               }}
             />
             {/* Red glow bottom-left */}
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F40C41]/20 blur-[120px] rounded-full -translate-x-1/4 translate-y-1/4 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F40532]/20 blur-[120px] rounded-full -translate-x-1/4 translate-y-1/4 pointer-events-none" />
             {/* Red glow top-right */}
-            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#F40C41]/10 blur-[100px] rounded-full translate-x-1/4 -translate-y-1/4 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#F40532]/10 blur-[100px] rounded-full translate-x-1/4 -translate-y-1/4 pointer-events-none" />
 
             {/* Top bar */}
             <div className="relative z-10 flex items-center justify-between px-6 pt-5 pb-0">
@@ -177,17 +177,17 @@ export default function Navbar() {
                     className="group flex items-center justify-between py-5 border-b border-white/6 last:border-0"
                   >
                     <div className="flex items-baseline gap-4">
-                      <span className="text-[#F40C41]/40 text-xs font-black tabular-nums">
+                      <span className="text-[#F40532]/40 text-xs font-black tabular-nums">
                         {link.num}
                       </span>
                       <span
-                        className="text-white font-black uppercase italic tracking-tighter group-hover:text-[#F40C41] transition-colors duration-200"
+                        className="text-white font-black uppercase tracking-[4px] group-hover:text-[#F40532] transition-colors duration-200"
                         style={{ fontSize: "clamp(2rem, 9vw, 3rem)" }}
                       >
                         {link.label}
                       </span>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-white/20 group-hover:text-[#F40C41] group-hover:translate-x-1 transition-all duration-200" />
+                    <ArrowRight className="w-5 h-5 text-white/20 group-hover:text-[#F40532] group-hover:translate-x-1 transition-all duration-200" />
                   </motion.a>
                 ))}
               </div>
@@ -208,7 +208,7 @@ export default function Navbar() {
               <a
                 href={href("#membership")}
                 onClick={(event) => goToSection(event, "#membership")}
-                className="flex items-center justify-center gap-3 w-full bg-[#F40C41] hover:bg-[#d00a37] text-white font-black uppercase tracking-widest text-sm py-5 rounded-2xl transition-all shadow-[0_0_40px_rgba(244,12,65,0.35)]"
+                className="primary-gradient-btn flex items-center justify-center gap-3 w-full text-white font-black uppercase tracking-widest text-sm py-5 rounded-2xl transition-all hover:brightness-105 shadow-[0_0_40px_rgba(244,5,50,0.35)]"
               >
                 Start Training Today
                 <ArrowRight className="w-4 h-4" />

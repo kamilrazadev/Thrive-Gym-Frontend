@@ -14,11 +14,10 @@ const pillars = [
 export default function About() {
   return (
     <section className="py-10 md:py-16 relative overflow-hidden bg-black">
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#F40C41]/6 blur-[140px] rounded-full translate-x-1/3 pointer-events-none" />
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#F40532]/6 blur-[140px] rounded-full translate-x-1/3 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
           {/* Left — image collage */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -45,8 +44,12 @@ export default function About() {
                 className="w-full h-32 object-cover"
               />
               <div className="bg-zinc-900 px-3 py-2">
-                <p className="text-white font-black text-xs uppercase tracking-wide">HIIT Training</p>
-                <p className="text-white/40 text-[10px] font-medium">45 min · 20 spots</p>
+                <p className="text-white font-black text-xs uppercase tracking-wide">
+                  HIIT Training
+                </p>
+                <p className="text-white/40 text-[10px] font-medium">
+                  45 min · 20 spots
+                </p>
               </div>
             </div>
 
@@ -56,7 +59,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="absolute top-0 left-0 bg-[#F40C41] rounded-2xl px-5 py-4 shadow-2xl shadow-[#F40C41]/30"
+              className="absolute top-0 left-0 bg-[#F40532] rounded-2xl px-5 py-4 shadow-2xl shadow-[#F40532]/30"
             >
               <p className="text-white text-3xl font-black leading-none">12+</p>
               <p className="text-white/75 text-[10px] font-bold uppercase tracking-widest mt-1">
@@ -74,19 +77,19 @@ export default function About() {
             className="flex flex-col gap-6"
           >
             <div className="flex items-center gap-3">
-              <span className="w-10 h-[2px] bg-[#F40C41]" />
-              <span className="text-[#F40C41] font-black text-xs uppercase tracking-[0.35em]">
+              <span className="w-10 h-[2px] bg-[#F40532]" />
+              <span className="text-[#F40532] font-black text-xs uppercase tracking-[0.35em]">
                 Our Story
               </span>
             </div>
 
             <h2
-              className="font-black uppercase tracking-tighter leading-[0.9] text-white"
+              className="font-black uppercase tracking-[4px] leading-[0.9] text-white"
               style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
             >
               MORE THAN A GYM —
               <br />
-              <span className="text-[#F40C41]">A MOVEMENT</span>
+              <span className="text-[#F40532]">A MOVEMENT</span>
             </h2>
 
             <p className="text-white/50 text-lg leading-relaxed font-medium">
@@ -113,7 +116,7 @@ export default function About() {
                   transition={{ delay: 0.1 + i * 0.07 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-[#F40C41] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#F40532] shrink-0 mt-0.5" />
                   <span className="text-white/65 font-medium">{p}</span>
                 </motion.li>
               ))}
@@ -121,7 +124,7 @@ export default function About() {
 
             <a
               href="#membership"
-              className="self-start mt-1 bg-white/6 hover:bg-white/12 border border-white/10 hover:border-[#F40C41]/40 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-all duration-300"
+              className="self-start mt-1 bg-white/6 hover:bg-white/12 border border-white/10 hover:border-[#F40532]/40 text-white font-black uppercase tracking-widest text-sm px-8 py-4 rounded-full transition-all duration-300"
             >
               Start Your Story →
             </a>
